@@ -1,41 +1,37 @@
-# Website
+# 博客简介
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+本站根据[Docusaurus 2](https://docusaurus.io/)进行构建。
 
-### Installation
-
-```
-$ yarn
-```
-
-### Local Development
+## 安装依赖
 
 ```
-$ yarn start
+npm install
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## 本地运行
 
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
+### 静态运行
 
 ```
-$ USE_SSH=true yarn deploy
+npm run server
 ```
 
-Not using SSH:
+### 动态运行（调试）
 
 ```
-$ GIT_USER=<Your GitHub username> yarn deploy
+$ npm run start
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+要在编辑文件时预览更改，执行这个命令运行一个本地服务器即可启动网站，最新更改就能立即反映出来了。
+
+## 构建
+
+```
+npm run build
+```
+
+生成的内容将被放置到 `/build` 目录下，该目录可以复制到任何静态文件托管服务上或者是自己的服务器上（云服务器、本地服务器），例如 [GitHub pages](https://pages.github.com/)、[Vercel](https://vercel.com/) 或 [Netlify](https://www.netlify.com/)
+
+## 代码托管
+
+代码主要是托管在GitHub上，方便在不同电脑之间进行转移
