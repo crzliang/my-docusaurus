@@ -1,8 +1,10 @@
 ---
 title: Git使用心得
 ---
+# Git使用心得
+
 1. 使用 `git init`进行空仓库的初始化，但是仓库是有东西的话就可以不用做这一步
-2. 使用 `git status`查看当前的状态，可以看到我对README.md进行了修改但是未提交
+3. 使用 `git status`查看当前的状态，可以看到我对README.md进行了修改但是未提交
 
 ![image.png](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/blog/1684206899329-06d16e81-f68c-493e-824f-abc32af09e04.png)
 

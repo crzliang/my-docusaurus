@@ -1,6 +1,8 @@
 ---
 title: CTFShow-web-命令执行
 ---
+# CTFShow-web-命令执行
+
 # web29
 
 源码：
@@ -232,7 +234,7 @@ if(isset($_GET['c'])){
         echo $flag;
   
     }
-      
+    
 }else{
     highlight_file(__FILE__);
 } 

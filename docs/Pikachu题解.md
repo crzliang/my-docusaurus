@@ -1,6 +1,8 @@
 ---
 title: Pikachu题解
 ---
+# Pikachu题解
+
 # Burte Force（暴力破解）
 
 ## 概述

@@ -1,7 +1,8 @@
 ---
 title: BUUCTF-web刷题
-
 ---
+# BUUCTF-web刷题
+
 > BUUCTF平台的web题，持续刷。
 
 ## [极客大挑战 2019]EasySQL

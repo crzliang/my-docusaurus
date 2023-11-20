@@ -1,6 +1,8 @@
 ---
 title: 记一次不知名比赛的WP
 ---
+# 记一次不知名比赛的WP
+
 # Reverse
 
 ## Reverse_签到
