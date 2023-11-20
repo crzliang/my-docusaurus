@@ -12,21 +12,21 @@ const FeatureList = [
       </>
     ),
   },
-  {
-    title: '备案信息',
-    // Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-      <a target="_blank" href="https://beian.miit.gov.cn/" >桂ICP备2022011217号-2</a>
-      </>
-    ),
-  },
+  // {
+  //   title: 'old blog',
+  //   // Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+  //   description: (
+  //     <>
+  //     <a target="_blank" href="https://hexo.a1pha.cn/" ></a>
+  //     </>
+  //   ),
+  // },
   {
     title: 'Contact Me',
     // Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-      <a href="mailto:Y3J6bGlhbmdAcXEuY29t" target="_blank" title="Email">base64：Y3J6bGlhbmdAcXEuY29t</a>
+      <a href="mailto:Y3J6bGlhbmdAcXEuY29t" target="_blank" title="Email">Y3J6bGlhbmdAcXEuY29t</a>
       </>
     ),
   },
@@ -34,7 +34,7 @@ const FeatureList = [
 
 function Feature({Svg, title, description}) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--6')}>
       <div className="text--center">
         {/* <Svg className={styles.featureSvg} role="img" /> */}
       </div>

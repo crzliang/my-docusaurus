@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'alpha',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'To be or not be.',
   favicon: 'img/logo.jpg',
 
   // Set the production url of your site here
@@ -20,7 +20,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
+  organizationName: 'a1phaaa', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -86,22 +86,23 @@ const config = {
           },
         ],
       },
-      // footer: {
-      //   // style: 'dark',
-      //   // links: [
-      //   //   {
-      //   //     title: 'Docs',
-      //   //     items: [
-      //   //       {
-      //   //         label: 'Tutorial',
-      //   //         to: '/docs/intro',
-      //   //       },
-      //   //     ],
-      //   //   },
+      footer: {
+        // style: 'dark',
+        // links: [
+        //   {
+        //     title: 'Docs',
+        //     items: [
+        //       {
+        //         label: 'Tutorial',
+        //         to: '/docs/intro',
+        //       },
+        //     ],
+        //   },
 
-      //   // ],
-      //   copyright: `<p>Copyright © ${new Date().getFullYear()} <a target="_blank" href="https://beian.miit.gov.cn/" >桂ICP备2022011217号-2</a></p>`,
-      // },
+        // ],
+        // copyright: `<p>Copyright © ${new Date().getFullYear()} </p><a target="_blank" href="https://beian.miit.gov.cn/" >桂ICP备2022011217号-2</a>`,
+        copyright: `<a target="_blank" href="https://beian.miit.gov.cn/" >备案号：桂ICP备2022011217号-2</a>`,
+      },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
