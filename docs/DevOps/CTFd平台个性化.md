@@ -1,5 +1,6 @@
 ---
 title: CTFd平台个性化
+slug: /DevOps/diy-ctfd
 ---
 # CTFd平台个性化
 

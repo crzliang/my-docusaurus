@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'alpha',
+  title: 'crzliang',
   tagline: 'To be or not be.',
   favicon: 'img/logo.jpg',
 
@@ -21,7 +21,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'a1phaaa', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  projectName: 'my-docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
@@ -66,7 +66,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'alpha的主页',
+        title: 'crzliang',
         // logo: {
         //   alt: 'alphs',
         //   src: 'img/logo.svg',
@@ -80,29 +80,33 @@ const config = {
           },
           {to: '/blog', label: '博客', position: 'left'},
           {
+            href: 'https://a1pha.cn/',
+            label: '个人主页',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/a1phaaa',
             label: 'GitHub',
             position: 'right',
           },
         ],
       },
-      footer: {
-        // style: 'dark',
-        // links: [
-        //   {
-        //     title: 'Docs',
-        //     items: [
-        //       {
-        //         label: 'Tutorial',
-        //         to: '/docs/intro',
-        //       },
-        //     ],
-        //   },
+      // footer: {
+      //   // style: 'dark',
+      //   // links: [
+      //   //   {
+      //   //     title: 'Docs',
+      //   //     items: [
+      //   //       {
+      //   //         label: 'Tutorial',
+      //   //         to: '/docs/intro',
+      //   //       },
+      //   //     ],
+      //   //   },
 
-        // ],
-        // copyright: `<p>Copyright © ${new Date().getFullYear()} </p><a target="_blank" href="https://beian.miit.gov.cn/" >桂ICP备2022011217号-2</a>`,
-        copyright: `<a target="_blank" href="https://beian.miit.gov.cn/" >备案号：桂ICP备2022011217号-2</a>`,
-      },
+      //   // ],
+      //   // copyright: `<p>Copyright © ${new Date().getFullYear()} </p><a target="_blank" href="https://beian.miit.gov.cn/" >桂ICP备2022011217号-2</a>`,
+      // },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,

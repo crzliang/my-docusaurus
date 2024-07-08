@@ -26,7 +26,7 @@ const FeatureList = [
     // Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-      <a href="mailto:Y3J6bGlhbmdAcXEuY29t" target="_blank" title="Email">Y3J6bGlhbmdAcXEuY29t</a>
+      <a href="mailto:crzliang@qq.com" target="_blank" title="Email">crzliang@qq.com</a>
       </>
     ),
   },
