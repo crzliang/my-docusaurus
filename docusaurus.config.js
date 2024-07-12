@@ -13,7 +13,7 @@ const config = {
   favicon: 'img/logo.jpg',
 
   // Set the production url of your site here
-  url: 'https://a1pha.cn/',
+  url: 'https://www.crzliang.cn/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -76,7 +76,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: '文档',
+            label: '文章',
           },
           {to: '/blog', label: '博客', position: 'left'},
           {
