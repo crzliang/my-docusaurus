@@ -10,10 +10,10 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'crzliang',
   tagline: 'To be or not be.',
-  favicon: 'img/logo.jpg',
+  favicon: 'img/ico.png',
 
   // Set the production url of your site here
-  url: 'https://www.crzliang.cn/',
+  url: 'https://space.crzliang.cn/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -68,8 +68,8 @@ const config = {
       navbar: {
         title: 'crzliang',
         // logo: {
-        //   alt: 'alphs',
-        //   src: 'img/logo.svg',
+        //   alt: 'crzliang',
+        //   src: 'img/ico.png',
         // },
         items: [
           {
