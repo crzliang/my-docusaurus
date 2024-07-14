@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -20,7 +20,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'a1phaaa', // Usually your GitHub org/user name.
+  organizationName: 'crzliang', // Usually your GitHub org/user name.
   projectName: 'my-docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'ignore',
@@ -69,19 +69,26 @@ const config = {
         title: 'crzliang',
         // logo: {
         //   alt: 'crzliang',
-        //   src: 'img/ico.png',
+        //   src: 'img/logo.jpg',
         // },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'archives',
             position: 'left',
-            label: '文章',
+            label: '文档',
           },
-          {to: '/blog', label: '博客', position: 'left'},
+          {
+            type: 'docSidebar',
+            sidebarId: 'course',
+            position: 'left',
+            label: '课程&实验',
+          },
+
+          { to: '/blog', label: '博客', position: 'left' },
           {
             href: 'https://a1pha.cn/',
-            label: '个人主页',
+            label: '主站',
             position: 'right',
           },
           {

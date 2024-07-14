@@ -37,13 +37,13 @@ if(isset($_GET['c'])){
 
 `system("ls")`命令执行成功，那就是要读取flag文件
 
-![image-20230428210800449](https://cdn.a1pha.cn/img/image-20230428210800449.png)
+![image-20230428210800449](https://img.crzliang.cn/img/image-20230428210800449.png)
 
 因为 `flag`是被过滤的，但是可以利用*代替完整的文件名去读取文件
 
 然后 `cat`在这题是读不出flag的，因为flag存储在一个 `php`文件中，然后 `cat`是将文件内容按行顺序输出的，如果要用 `cat`去读的话，是按照 `<?php`格式去执行，但是因为文件中没有 `echo`输出，所以就无法读出flag，`tac`是将文件内容按行倒序输出的，就避开了 `<?php`，就可以正常的输出flag了
 
-![image-20230428211731575](https://cdn.a1pha.cn/img/image-20230428211731575.png)
+![image-20230428211731575](https://img.crzliang.cn/img/image-20230428211731575.png)
 
 # web30
 
@@ -77,11 +77,11 @@ if(isset($_GET['c'])){
 
 因为 `system`函数被过滤了，只能考虑其他的函数，其他的函数还有 `exec、passthru、反撇号和shell_exec`其中只有 `passthru`和 `system`会有输出到浏览器不需要echo或return来查看结果
 
-![image-20230428213258476](https://cdn.a1pha.cn/img/image-20230428213258476.png)
+![image-20230428213258476](https://img.crzliang.cn/img/image-20230428213258476.png)
 
 读flag和web29一样
 
-![image-20230428213308870](https://cdn.a1pha.cn/img/image-20230428213308870.png)
+![image-20230428213308870](https://img.crzliang.cn/img/image-20230428213308870.png)
 
 # web31
 
@@ -115,7 +115,7 @@ if(isset($_GET['c'])){
 
 这里涉及到空格绕过，可以用 `%09`绕过，`system`函数也是被过滤的，这里可以直接用 `echo`命令输出查看的内容
 
-![image-20230428234037253](https://cdn.a1pha.cn/img/image-20230428234037253.png)
+![image-20230428234037253](https://img.crzliang.cn/img/image-20230428234037253.png)
 
 # web32
 
@@ -163,7 +163,7 @@ require_once "/etc/passwd";
 
 其中 `include "/etc/passwd"`是可以利用的
 
-![image-20230429000203174](https://cdn.a1pha.cn/img/image-20230429000203174.png)
+![image-20230429000203174](https://img.crzliang.cn/img/image-20230429000203174.png)
 
 源码里面也没有对 `$`进行过滤，用 `$_POST[x]`或者 `$_GET[x]`，然后用php伪协议将include包含的文件显示出来
 
@@ -171,7 +171,7 @@ payload：`?c=include"$_GET[url]"?>&url=php://filter/read=convert.base64-encode/
 
 base64解码：
 
-![image-20230428235716076](https://cdn.a1pha.cn/img/image-20230428235716076.png)
+![image-20230428235716076](https://img.crzliang.cn/img/image-20230428235716076.png)
 
 # web33
 
@@ -204,7 +204,7 @@ if(isset($_GET['c'])){
 
 `?c=include$_GET[url]?>&url=php://filter/read=convert.base64-encode/resource=flag.php`即可
 
-![image-20230429001355876](https://cdn.a1pha.cn/img/image-20230429001355876.png)
+![image-20230429001355876](https://img.crzliang.cn/img/image-20230429001355876.png)
 
 # web34-36
 
@@ -246,4 +246,4 @@ if(isset($_GET['c'])){
 
 payload：`c=data://text/plain,<?php system('tac fla*');?>`
 
-![image-20230429134736155](https://cdn.a1pha.cn/img/image-20230429134736155.png)
+![image-20230429134736155](https://img.crzliang.cn/img/image-20230429134736155.png)

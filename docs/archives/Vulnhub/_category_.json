@@ -1,6 +1,6 @@
 {
   "label": "Vulnhub",
-  "position": 3,
+  "position": 7,
   "link": {
     "type": "generated-index",
     "description": "这个板块是记录打Vulnhub靶场里面的靶机的过程。"

