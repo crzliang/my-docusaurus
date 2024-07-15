@@ -1,5 +1,6 @@
 ---
-title: 22年网安小学期-CTF
+title: 2022年网安小学期-CTF
+slug: /CTF/2022xuqctf
 ---
 # 22年网安小学期-CTF
 

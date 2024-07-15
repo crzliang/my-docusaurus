@@ -12,15 +12,6 @@ const FeatureList = [
       </>
     ),
   },
-  // {
-  //   title: 'old blog',
-  //   // Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-  //   description: (
-  //     <>
-  //     <a target="_blank" href="https://hexo.a1pha.cn/" ></a>
-  //     </>
-  //   ),
-  // },
   {
     title: 'Contact Me',
     // Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,

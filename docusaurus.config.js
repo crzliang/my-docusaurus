@@ -76,7 +76,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'archives',
             position: 'left',
-            label: '文档',
+            label: '杂七杂八',
           },
           {
             type: 'docSidebar',
@@ -84,10 +84,28 @@ const config = {
             position: 'left',
             label: '课程&实验',
           },
-
-          { to: '/blog', label: '博客', position: 'left' },
           {
-            href: 'https://a1pha.cn/',
+            type: 'docSidebar',
+            sidebarId: 'CTF',
+            position: 'left',
+            label: 'CTF',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'hack',
+            position: 'left',
+            label: '靶场&靶机',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'DevOps',
+            position: 'left',
+            label: '运维&开发',
+          },
+
+          { to: '/blog', label: '博客', position: 'right' },
+          {
+            href: 'https://www.crzliang.cn/',
             label: '主站',
             position: 'right',
           },
