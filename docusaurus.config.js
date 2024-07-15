@@ -110,7 +110,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/a1phaaa',
+            href: 'https://github.com/crzliang',
             label: 'GitHub',
             position: 'right',
           },
