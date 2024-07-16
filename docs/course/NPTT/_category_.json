@@ -3,6 +3,6 @@
   "position": 7,
   "link": {
     "type": "generated-index",
-    "description": "这个板块是记录打Vulnhub靶场里面的靶机的过程。"
+    "description": "这个板块的文章是在做网络渗透测试技术实验的时候写的，主要是以学习为目的。其中也还有很多的不足之处"
   }
 }

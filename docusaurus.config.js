@@ -94,7 +94,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'hack',
             position: 'left',
-            label: '靶场&靶机',
+            label: '渗透测试',
           },
           {
             type: 'docSidebar',
