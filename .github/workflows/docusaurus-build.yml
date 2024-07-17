@@ -33,19 +33,6 @@ jobs:
         with:
           host: ${{ secrets.REMOTE_HOST }} # 服务器host
           username: ${{ secrets.REMOTE_USER }} # 服务器用户名
-          key: ${{ secrets.SSH_TOKEN }} # 服务器密码
+          password: ${{ secrets.PASSWORD }} # 服务器密码
           source: 'build' # 需要上传的文件
           target: '~/docusaurus/src/' # 上传到服务器的什么位置
-          port: 22
-          timeout: 30s
-          command_timeout: 10m
-          use_insecure_cipher: false
-          rm: false
-          debug: true
-          strip_components: 0
-          overwrite: true
-          tar_dereference: false
-          tar_exec: tar
-          proxy_port: 22
-          proxy_timeout: 30s
-          proxy_use_insecure_cipher: false
