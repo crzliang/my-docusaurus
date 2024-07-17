@@ -34,7 +34,7 @@ jobs:
         with:
           ssh_private_key: ${{ secrets.SSH_TOKEN }}
           ARGS: "-avz --delete"
-          local_path: './dist/*'
+          local_path: './build/*'
           server: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           remote_path: ${{ secrets.TARGET }}
