@@ -29,7 +29,7 @@ jobs:
           path: build
 
       - name: upload to server
-        uses: appleboy/scp-action@latest
+        uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.REMOTE_HOST }} # 服务器host
           username: ${{ secrets.REMOTE_USER }} # 服务器用户名
