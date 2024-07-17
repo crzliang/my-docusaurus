@@ -28,13 +28,11 @@ jobs:
         with:
           path: build
 
-      # 上传到服务器
       - name: Deploy
-        uses: wlixcc/SFTP-Deploy-Action@v1.0
+        uses: appleboy/scp-action@master
         with:
-          ssh_private_key: ${{ secrets.SSH_TOKEN }}
-          ARGS: "-avz --delete"
-          local_path: './build/*'
-          server: ${{ secrets.REMOTE_HOST }}
+          host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
-          remote_path: ${{ secrets.TARGET }}
+          key: ${{ secrets.SSH_TOKEN }}
+          source: './build'
+          target: ${{ secrets.TARGET }}
