@@ -3,7 +3,7 @@ name: docusaurus-deploy
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs: # 构建的任务，一个工作流有多个构建任务，
   build-and-deploy:
