@@ -27,12 +27,3 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: build
-
-      - name: upload to server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.REMOTE_HOST }} # 服务器host
-          username: ${{ secrets.REMOTE_USER }} # 服务器用户名
-          password: ${{ secrets.PASSWORD }} # 服务器密码
-          source: 'build' # 需要上传的文件
-          target: '~/docusaurus/src/' # 上传到服务器的什么位置
