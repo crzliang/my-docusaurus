@@ -29,15 +29,15 @@ jobs: # 构建的任务，一个工作流有多个构建任务，
       - name: ssh deploy
         uses: easingthemes/ssh-deploy@v5.0.3
         with:
-      # Private key part of an SSH key pair
+      # SSH 密钥对的私钥部分
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       # Remote host
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
       # Remote user
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-      # Source directory, path relative to `$GITHUB_WORKSPACE` root, eg: `dist/`
+      # 源目录，相对于`$GITHUB_WORKSPACE`根的路径，我是部署docusaurus，，对应的目录就是构建好代码的存放目录：build
           SOURCE: "build"
-      # Script to run on host machine before rsync
+      # 在 rsync 之前在主机上运行的脚本，这个目录因人而异
           SCRIPT_BEFORE: "mkdir -p ~/docusaurus/build"
-      # Target directory
+      # 目标目录，这个目录和上面的对应即可，也是因人而异
           TARGET: "~/docusaurus/"
