@@ -6,6 +6,9 @@
 
 import { themes as prismThemes } from 'prism-react-renderer';
 
+const math = require('remark-math');
+const katex = require('rehype-katex');
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'crzliang',
@@ -41,15 +44,18 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
-          blogSidebarTitle: '所有帖子',
-          blogSidebarCount: 'ALL',
+          blogSidebarTitle: '博客',
           showReadingTime: true,
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -62,9 +68,21 @@ const config = {
     ],
   ],
 
+  stylesheets: [
+    {
+      href: './css/katex.min.css',
+      type: 'text/css',
+    },
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -78,7 +96,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'archives',
             position: 'left',
-            label: '杂七杂八',
+            label: '文档',
           },
           {
             type: 'docSidebar',

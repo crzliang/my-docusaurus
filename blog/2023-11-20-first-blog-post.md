@@ -5,3 +5,5 @@ authors: crzliang
 tags: [hello]
 ---
 第一篇博客
+
+<!-- truncate -->
