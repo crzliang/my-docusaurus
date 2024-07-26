@@ -1,10 +1,7 @@
 ---
-title: Hack the box Oopsie题解
-
+title: Oopsie
 ---
-# Hack the box Oopsie题解
-
-# 扫机器
+## 扫端口
 
 拿到目标机器的IP，先看一下，开放了什么端口
 
@@ -20,7 +17,7 @@ nmap -sC -sV 10.129.95.191
 
 ![image-20230326131240016](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230326131240016.png)
 
-# 路径泄漏
+## 路径泄漏
 
 F12打开调试就看到了泄露的路径
 
@@ -36,7 +33,7 @@ F12打开调试就看到了泄露的路径
 
 ![image-20230326131824692](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230326131824692.png)
 
-# 越权
+## 越权
 
 当点进**Account**页面的时候URL引起了注意，id=2，那就意味着id=1是管理员账号了，那就试试
 
@@ -52,7 +49,7 @@ F12打开调试就看到了泄露的路径
 
 ![image-20230326132245663](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230326132245663.png)
 
-# 上传webshell
+## 上传webshell
 
 用的是kali自带的**php-reverse-shell.php**，使用方法**GitHub**上有
 
@@ -60,7 +57,7 @@ F12打开调试就看到了泄露的路径
 
 ![image-20230326135027686](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230326135027686.png)
 
-# 信息收集
+## 信息收集
 
 在 `/var/www/html/cdn-cgi/login`目录下发现了 `db.php`，并且拿到了数据库的账号密码，
 
@@ -70,13 +67,13 @@ F12打开调试就看到了泄露的路径
 
 ![image-20230326135502246](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230326135502246.png)
 
-# 切换交互式shell
+## 切换交互式shell
 
 ```shell
 SHELL=/bin/bash script -q /dev/null
 ```
 
-# 提权
+## 提权
 
 用前面得到的信息切换到**robert**用户，然后使用id发现还有一个**bugtracker**组，查找此组是否具有特殊的访问权限
 
@@ -111,7 +108,7 @@ chmod +x cat						//赋予执行权限
 
 ![image-20230326141653739](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230326141653739.png)
 
-# 答案
+## 答案
 
 > 1. proxy
 > 2. /cdn-cgi/login
@@ -126,7 +123,7 @@ chmod +x cat						//赋予执行权限
 > 11. f2c74ee8db7983851ab2a96a44eb7981
 > 12. af13b0bee69f8a877c3faf667f7beacf
 
-# 参考文章
+## 参考文章
 
 - [渗透测试练习靶场hackthebox——Starting Point Oopsie攻略](https://blog.csdn.net/m0_48066270/article/details/108641892)
 - [hack the box靶场oopsie靶机](https://blog.csdn.net/zr1213159840/article/details/123629681)

