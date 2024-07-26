@@ -3,25 +3,25 @@ title: 记一次不知名比赛的WP
 ---
 # 记一次不知名比赛的WP
 
-# Reverse
+## Reverse
 
-## Reverse_签到
+### Reverse_签到
 
 找到main函数，就看到了flag
 
 ![image-20230620090120146](https://img.crzliang.cn/img/image-20230620090120146.png)
 
-# Crypto
+## Crypto
 
-## easily_Caesar
+### easily_Caesar
 
 凯撒解码一把梭，key=24
 
 ![image-20230620094549028](https://img.crzliang.cn/img/image-20230620094549028.png)
 
-# Misc
+## Misc
 
-## medium_CTFvalues
+### medium_CTFvalues
 
 16进制转文本得到unicode编码
 
@@ -37,7 +37,7 @@ base64解码得到一个字符串，然后ascii码转文本
 
 ![image-20230620094305264](https://img.crzliang.cn/img/image-20230620094305264.png)
 
-## difficult_mobile_3
+### difficult_mobile_3
 
 jadx打开然后全局搜索base64，找字符串后进行ascii转字符
 
@@ -47,9 +47,9 @@ jadx打开然后全局搜索base64，找字符串后进行ascii转字符
 
 ![image-20230620121956543](https://img.crzliang.cn/img/image-20230620121956543.png)
 
-# Pwn
+## Pwn
 
-## easily_pwn_1
+### easily_pwn_1
 
 程序分析：64位程序，之开启了NX保护
 
@@ -81,7 +81,7 @@ io.sendline(payload)
 io.interactive()
 ```
 
-## medium_pwn_2
+### medium_pwn_2
 
 程序分析：32位程序，开启了32位保护
 

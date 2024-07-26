@@ -3,16 +3,16 @@ title: LiCTF2023--公开赛
 slug: /CTF/2023LiCTF
 ---
 
-# web
+## web
 
-## 我Flag呢？
+### 我Flag呢？
 ![image.png](https://img.crzliang.cn/img/202407152311522.png)
 
 看源代码：
 
 ![image.png](https://img.crzliang.cn/img/202407152311523.png)
 
-## Ping
+### Ping
 ![image.png](https://img.crzliang.cn/img/202407152311524.png)
 
 直接在输入框输入不能执行命令，尝试抓包改包
@@ -29,7 +29,7 @@ flag在根目录下，直接读
 
 ![image.png](https://img.crzliang.cn/img/202407152311528.png)
 
-## Follow me and hack me
+### Follow me and hack me
 
 ![image.png](https://img.crzliang.cn/img/202407152311529.png)
 
@@ -38,36 +38,36 @@ SELECT username,password FROM users WHERE id = ((((((1))))))
 
 SELECT username,password FROM users WHERE id = ((((((1)))))) union select database()--+))))))
 
-# Misc
+## Misc
 
-## 签到
+### 签到
 
 按题意得
 
-## What_1s_BASE
+### What_1s_BASE
 
 ![image.png](https://img.crzliang.cn/img/202407152311530.png)
 
-## Take me hand
+### Take me hand
 
 ![image.png](https://img.crzliang.cn/img/202407152311531.png)
 
-## 404notfound
+### 404notfound
 
 ![image.png](https://img.crzliang.cn/img/202407152311532.png)
 
-# Crypto
+## Crypto
 
-## Hex?Hex！
+### Hex?Hex！
 
 ![image.png](https://img.crzliang.cn/img/202407152311533.png)
 
-## 梦想是红色的
+### 梦想是红色的
 
 ![image.png](https://img.crzliang.cn/img/202407152311534.png)
 
-# Reverse
+## Reverse
 
-## 世界上最棒的程序员
+### 世界上最棒的程序员
 
 ![image.png](https://img.crzliang.cn/img/202407152311535.png)

@@ -4,7 +4,7 @@ slug: /CTF/2022xuqctf
 ---
 # 22年网安小学期-CTF
 
-# 木册木兰
+## 木册木兰
 
 ![img](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/1656402244227-1535d8a9-9932-489c-af63-b357e1b72be7.png)
 
@@ -12,7 +12,7 @@ slug: /CTF/2022xuqctf
 
 ![img](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/1656402270709-22a55c9b-fd6e-4cef-b874-ef8a6146eb6b.png)
 
-# inputer
+## inputer
 
 ![img](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/1656402323639-3d802464-d117-4c8b-99b0-2b5c96c80556.png)
 
@@ -25,15 +25,15 @@ slug: /CTF/2022xuqctf
 
 ![img](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/1656403931462-65c99e45-585b-4da9-aa67-ebbf7b040faf.png)
 
-# WEB_blind_exec
+## WEB_blind_exec
 
 ![img](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/1656418501152-cffd8b07-e4b3-4c7d-88e9-2af93a200893.png)
 
-# LFI
+## LFI
 
 ![img](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/1656425908372-f0b23cde-7697-4219-a001-09d5cd26f703.png)
 
-# baby_sql
+## baby_sql
 
 ```
 admin' or '1'='1
@@ -41,21 +41,21 @@ admin' or '1'='1
 
 ![img](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/1656463477302-afa6aabf-6cba-40da-a6ab-9c6d651c78ce.png)
 
-# WEB_randnum
+## WEB_randnum
 
 ![img](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/1656463743749-0e0e3ae5-1757-4c23-a7d3-04eef75b7ca4.png)
 
-# WEB_babyphp
+## WEB_babyphp
 
 ![img](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/1656463757900-66e0ad0f-8176-46e7-aade-bff9d0305c50.png)
 
-# easy_getshell
+## easy_getshell
 
 - [pbot复现](https://www.anquanke.com/post/id/212603?from=groupmessage#h2-6)
 
 ![img](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/1656489800858-4a805906-bd00-402f-b3cb-b4cba8d14c15.png)
 
-# sessionlfi
+## sessionlfi
 
 - 源码中发现页面传参使用get方法，猜测存在sql注入漏洞
 
@@ -81,7 +81,7 @@ admin' or '1'='1
 
 ![img](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/1656507964485-4c6551f9-be4e-48c3-bc18-37a4f769352b.png)
 
-# happy
+## happy
 
 - 题目：
 
@@ -91,7 +91,7 @@ admin' or '1'='1
 
 ![img](https://alpha-blog-1300014916.cos.ap-guangzhou.myqcloud.com/img/1660034476965-e38a5350-cba4-4601-b203-f106b0ffc8f4.png)
 
-# rsarsa
+## rsarsa
 
 - 题目：
 
