@@ -12,7 +12,7 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'crzliang',
-  tagline: 'To be or not be.',
+  tagline: '主要是记录自己在学习过程中的笔记',
   favicon: 'img/ico.png',
 
   // Set the production url of your site here
@@ -123,7 +123,6 @@ const config = {
             label: '运维&开发',
           },
 
-          { to: '/blog', label: '博客', position: 'right' },
           {
             href: 'https://www.crzliang.cn/',
             label: '主站',

@@ -3,33 +3,33 @@ import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 const FeatureList = [
-  {
-    title: 'About Me',
-    // Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-      <a href='./about'>关于</a>
-      </>
-    ),
-  },
-  {
-    title: '友链',
-    // Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-      <a href='./friends'>友链</a>
-      </>
-    ),
-  },
-  {
-    title: 'Contact Me',
-    // Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-      <a href="mailto:crzliang@qq.com" target="_blank" title="Email">crzliang@qq.com</a>
-      </>
-    ),
-  },
+  // {
+  //   title: 'About Me',
+  //   // Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+  //   description: (
+  //     <>
+  //     <a href='./about'>关于</a>
+  //     </>
+  //   ),
+  // },
+  // {
+  //   title: '友链',
+  //   // Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+  //   description: (
+  //     <>
+  //     <a href='./friends'>友链</a>
+  //     </>
+  //   ),
+  // },
+  // {
+  //   title: 'Contact Me',
+  //   // Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+  //   description: (
+  //     <>
+  //     <a href="mailto:crzliang@qq.com" target="_blank" title="Email">crzliang@qq.com</a>
+  //     </>
+  //   ),
+  // },
 ];
 
 function Feature({Svg, title, description}) {
